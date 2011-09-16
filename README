@@ -1,0 +1,42 @@
+1. Overview
+	* This tool is used to scan AS3 intrinsic files and generate dot file.
+	Then you can use graphviz dot to get a class relationship diagram.
+	* Only for testing, not stable.
+	
+1. Requirement
+	* Windows XP
+	* dot
+		http://www.graphviz.org/Download.php
+	* JDK 1.6
+		http://www.oracle.com/technetwork/java/javase/downloads/index.html
+	* Eclipse
+		http://www.eclipse.org/
+	* ANTLR & ANTLRWorks
+		http://www.antlr.org/
+	* FlashDevelop
+		http://www.flashdevelop.org/wikidocs/index.php?title=Main_Page
+		
+2. Build
+	* If you want to generate parser and lexer source files, run gen_antlr.bat.
+	* Use eclipse to import the project path and compile it, or run compile.bat.
+
+3. Get AS3 intrinsic files
+	* Create a Flex 4 project.
+	* Put the AS3 files to src folder.
+	* View->Project Manager
+	* Project Manager's toolbar buttons->Type Explorer, open Type Explorer
+	* Type Explorer, right click tree, popup menu->Convert to Intrinsic
+	* Save files to a folder.
+	
+4. Test & Run
+	* Put the intrinsic files to test\as3. (Remove original files first)
+	* Run run_gendot_as3.bat, it will process the path test\as3,
+	and generate the output file out.dot and out.gif.
+	* Open out.gif.
+
+5. Test data
+	* Test data is from papervision3d
+		http://code.google.com/p/papervision3d/
+
+6. Bugs
+	* This tool has many bugs to fix, mainly in SimpleAS3.g
